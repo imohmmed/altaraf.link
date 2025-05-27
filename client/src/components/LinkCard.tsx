@@ -69,9 +69,9 @@ export default function LinkCard({
               rotate: isHovered ? 5 : 0,
             }}
             transition={{ duration: 0.3 }}
-            className="icon-container p-4 rounded-2xl"
+            className="icon-container w-16 h-16 flex items-center justify-center bg-accent/10 rounded-2xl border border-accent/20"
           >
-            <i className={`${icon} text-3xl text-accent`} />
+            <i className={`${icon} text-2xl text-accent`} />
           </motion.div>
           <div>
             <h3 className="text-2xl font-cairo font-bold text-white mb-2">
