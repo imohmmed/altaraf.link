@@ -92,10 +92,12 @@ export default function LinkCard({
             scale: isHovered ? 1.1 : 1,
           }}
           transition={{ duration: 0.3 }}
-          className="w-12 h-12 flex items-center justify-center rounded-xl border"
-          style={{ borderColor: 'hsl(220, 13%, 25%)' }}
+          className="text-accent"
         >
-          <i className="fas fa-arrow-left text-xl text-accent" />
+          <i className="fas fa-arrow-left text-2xl" style={{ 
+            textShadow: `0 0 0 1px hsl(220, 13%, 25%)`,
+            filter: 'drop-shadow(0 0 1px hsl(220, 13%, 25%))'
+          }} />
         </motion.div>
       </div>
       
