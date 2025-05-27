@@ -12,43 +12,31 @@ export default function Home() {
       icon: "fas fa-map-marker-alt",
       title: "موقع المكتب",
       description: "زورنا في مقرنا الرئيسي",
-      buttonText: "زيارة",
-      buttonIcon: "fas fa-external-link-alt",
     },
     {
       icon: "fas fa-globe",
       title: "الموقع الإلكتروني",
       description: "اكتشف جميع خدماتنا وعروضنا",
-      buttonText: "تصفح",
-      buttonIcon: "fas fa-arrow-left",
     },
     {
       icon: "fab fa-telegram",
       title: "تيليجرام",
       description: "تواصل مباشر وخدمة سريعة",
-      buttonText: "راسلنا",
-      buttonIcon: "fab fa-telegram",
     },
     {
       icon: "fab fa-instagram",
       title: "إنستغرام",
       description: "شاهد أعمالنا وأحدث العروض",
-      buttonText: "متابعة",
-      buttonIcon: "fab fa-instagram",
     },
     {
       icon: "fab fa-tiktok",
       title: "تيك توك",
       description: "فيديوهات قصيرة ومحتوى تفاعلي",
-      buttonText: "مشاهدة",
-      buttonIcon: "fab fa-tiktok",
     },
     {
       icon: "fab fa-facebook",
       title: "فيسبوك",
       description: "انضم لمجتمعنا وآخر الأخبار",
-      buttonText: "إعجاب",
-      buttonIcon: "fab fa-facebook",
     },
   ];
 

@@ -5,8 +5,6 @@ interface LinkCardProps {
   icon: string;
   title: string;
   description: string;
-  buttonText: string;
-  buttonIcon: string;
   delay?: number;
 }
 
@@ -14,19 +12,15 @@ export default function LinkCard({
   icon,
   title,
   description,
-  buttonText,
-  buttonIcon,
   delay = 0,
 }: LinkCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     // Create ripple effect
-    const button = e.currentTarget.querySelector('.premium-button') as HTMLElement;
-    if (!button) return;
-
+    const card = e.currentTarget;
     const ripple = document.createElement('span');
-    const rect = button.getBoundingClientRect();
+    const rect = card.getBoundingClientRect();
     const size = Math.max(rect.width, rect.height);
     const x = e.clientX - rect.left - size / 2;
     const y = e.clientY - rect.top - size / 2;
@@ -37,30 +31,37 @@ export default function LinkCard({
       height: ${size}px;
       left: ${x}px;
       top: ${y}px;
-      background: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
       transform: scale(0);
-      animation: ripple 0.6s linear;
+      animation: ripple 0.8s linear;
       pointer-events: none;
+      z-index: 1;
     `;
     
-    button.appendChild(ripple);
+    card.appendChild(ripple);
     
     setTimeout(() => {
       ripple.remove();
-    }, 600);
+    }, 800);
   };
 
   return (
-    <motion.div
+    <motion.a
+      href="https://t.me/mohmmed"
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={handleClick}
       initial={{ y: 50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay, duration: 0.8, ease: "easeOut" }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      className="link-card bg-white/15 backdrop-blur-md rounded-3xl p-8 border border-white/20"
+      whileHover={{ scale: 1.02, y: -5 }}
+      whileTap={{ scale: 0.98 }}
+      className="link-card bg-white/15 backdrop-blur-md rounded-3xl p-8 border border-white/20 block relative overflow-hidden cursor-pointer"
     >
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between relative z-10">
         <div className="flex items-center space-x-6">
           <motion.div
             animate={{
@@ -80,19 +81,25 @@ export default function LinkCard({
           </div>
         </div>
         
-        <motion.a
-          href="https://t.me/mohmmed"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={handleClick}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="premium-button px-8 py-4 rounded-2xl text-white font-cairo font-semibold text-lg relative overflow-hidden"
+        <motion.div
+          animate={{
+            x: isHovered ? 5 : 0,
+            scale: isHovered ? 1.1 : 1,
+          }}
+          transition={{ duration: 0.3 }}
+          className="text-accent"
         >
-          <i className={`${buttonIcon} ml-2`} />
-          {buttonText}
-        </motion.a>
+          <i className="fas fa-arrow-left text-2xl" />
+        </motion.div>
       </div>
-    </motion.div>
+      
+      {/* Hover gradient overlay */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isHovered ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+        className="absolute inset-0 bg-gradient-to-r from-accent/10 to-primary/10 rounded-3xl"
+      />
+    </motion.a>
   );
 }
