@@ -59,7 +59,7 @@ export default function LinkCard({
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{ scale: 1.02, y: -5 }}
       whileTap={{ scale: 0.98 }}
-      className="link-card bg-white/15 backdrop-blur-md rounded-3xl p-8 border border-white/20 block relative overflow-hidden cursor-pointer"
+      className="link-card bg-white/15 backdrop-blur-md rounded-3xl px-8 py-5 border border-white/20 block relative overflow-hidden cursor-pointer"
     >
       <div className="flex items-center justify-between relative z-10">
         <div className="flex items-center space-x-4 -ml-4">
