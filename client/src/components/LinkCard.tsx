@@ -62,7 +62,7 @@ export default function LinkCard({
       className="link-card bg-white/15 backdrop-blur-md rounded-3xl px-8 py-5 border border-white/20 block relative overflow-hidden cursor-pointer"
     >
       <div className="flex items-center justify-between relative z-10">
-        <div className="flex items-center space-x-4 -ml-4">
+        <div className="flex items-center gap-6 -ml-4">
           <motion.div
             animate={{
               scale: isHovered ? 1.1 : 1,
