@@ -152,20 +152,20 @@ export default function Home() {
       </header>
 
       {/* Links Section */}
-      <section className="py-20 relative">
+      <section className="py-12 relative">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
             <h2 className="text-4xl font-cairo font-bold text-white mb-4">تواصل معنا</h2>
             <p className="text-xl font-tajawal text-white/80">جميع روابطنا في مكان واحد</p>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto grid gap-8">
+          <div className="max-w-4xl mx-auto grid gap-6">
             {links.map((link, index) => (
               <LinkCard
                 key={index}
@@ -178,14 +178,14 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 relative">
+      <section className="py-12 relative">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
             <h2 className="text-4xl font-cairo font-bold text-white mb-4">لماذا نحن؟</h2>
             <p className="text-xl font-tajawal text-white/80">مميزات تجعلنا الخيار الأول</p>
