@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap');
+
+:root {
+  --background: 200 100% 40%; /* Sky blue primary */
+  --foreground: 220 13% 18%; /* Dark gray text */
+  --muted: 200 100% 45%;
+  --muted-foreground: 220 13% 45%;
+  --popover: 200 100% 40%;
+  --popover-foreground: 220 13% 18%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 13% 18%;
+  --border: 200 50% 80%;
+  --input: 200 50% 80%;
+  --primary: 200 100% 40%; /* Sky blue */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 200 50% 95%;
+  --secondary-foreground: 220 13% 18%;
+  --accent: 35 100% 50%; /* Golden orange */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 200 100% 40%;
+  --radius: 0.5rem;
+  
+  /* Custom luxury colors */
+  --primary-light: 200 100% 50%;
+  --primary-dark: 200 100% 30%;
+  --accent-light: 35 100% 60%;
+  --accent-dark: 35 100% 40%;
+}
+
+.dark {
+  --background: 220 13% 9%;
+  --foreground: 0 0% 98%;
+  --muted: 220 13% 15%;
+  --muted-foreground: 220 13% 64%;
+  --popover: 220 13% 9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 220 13% 9%;
+  --card-foreground: 0 0% 98%;
+  --border: 220 13% 15%;
+  --input: 220 13% 15%;
+  --primary: 200 100% 40%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 13% 15%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 35 100% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 220 13% 83%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+  }
+  
+  html {
+    direction: rtl;
+  }
+}
+
+@layer utilities {
+  .font-cairo {
+    font-family: 'Cairo', sans-serif;
+  }
+  
+  .font-tajawal {
+    font-family: 'Tajawal', sans-serif;
+  }
+  
+  .luxury-gradient {
+    background: linear-gradient(135deg, hsl(200, 100%, 40%) 0%, hsl(200, 100%, 50%) 50%, hsl(220, 100%, 60%) 100%);
+  }
+  
+  .premium-button {
+    background: linear-gradient(45deg, hsl(35, 100%, 50%), hsl(35, 100%, 60%));
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .premium-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+  }
+  
+  .premium-button:hover::before {
+    left: 100%;
+  }
+  
+  .premium-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(255, 165, 0, 0.4);
+  }
+  
+  .link-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px);
+  }
+  
+  .link-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon-container {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px rgba(255, 165, 0, 0.3); }
+  100% { box-shadow: 0 0 30px rgba(255, 165, 0, 0.6); }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.floating-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-shape {
+  position: absolute;
+  opacity: 0.1;
+  animation: float 8s ease-in-out infinite;
+}
+
+.floating-shape:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-shape:nth-child(2) {
+  top: 60%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.floating-shape:nth-child(3) {
+  top: 80%;
+  left: 20%;
+  animation-delay: 4s;
+}
