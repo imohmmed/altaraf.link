@@ -17,8 +17,8 @@
   --input: 200 50% 80%;
   --primary: 200 100% 40%; /* Sky blue */
   --primary-foreground: 0 0% 100%;
-  --secondary: 200 50% 95%;
-  --secondary-foreground: 220 13% 18%;
+  --secondary: 220 13% 18%; /* Dark gray secondary */
+  --secondary-foreground: 0 0% 100%;
   --accent: 35 100% 50%; /* Golden orange */
   --accent-foreground: 0 0% 100%;
   --destructive: 0 84% 60%;
