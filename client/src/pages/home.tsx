@@ -227,7 +227,7 @@ export default function Home() {
             <p className="font-tajawal text-white/80">رحلتك تبدأ من هنا</p>
           </div>
           
-          <div className="flex justify-center items-center gap-8 mb-8">
+          <div className="flex justify-center items-center gap-4 mb-8">
             {[
               { icon: "fas fa-map-marker-alt", label: "موقع المكتب" },
               { icon: "fas fa-globe", label: "الموقع الإلكتروني" },
@@ -241,18 +241,15 @@ export default function Home() {
                 href="https://t.me/mohmmed"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.3, y: -8 }}
+                whileHover={{ scale: 1.2, y: -5 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="group flex flex-col items-center"
+                className="group"
                 title={social.label}
               >
-                <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-2 group-hover:bg-accent/20 group-hover:border-accent/40 transition-all duration-300">
-                  <i className={`${social.icon} text-xl text-white/70 group-hover:text-accent transition-colors duration-300`} />
+                <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center group-hover:bg-accent/20 group-hover:border-accent/40 transition-all duration-300">
+                  <i className={`${social.icon} text-lg text-white/70 group-hover:text-accent transition-colors duration-300`} />
                 </div>
-                <span className="text-xs text-white/50 font-tajawal opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {social.label}
-                </span>
               </motion.a>
             ))}
           </div>
