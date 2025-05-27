@@ -59,7 +59,8 @@ export default function LinkCard({
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{ scale: 1.02, y: -5 }}
       whileTap={{ scale: 0.98 }}
-      className="link-card bg-white/15 backdrop-blur-md rounded-3xl px-8 py-5 border border-white/20 block relative overflow-hidden cursor-pointer"
+      className="link-card bg-white/15 backdrop-blur-md rounded-3xl px-8 py-5 border block relative overflow-hidden cursor-pointer"
+      style={{ borderColor: 'hsl(220, 13%, 25%)' }}
     >
       <div className="flex items-center justify-between relative z-10">
         <div className="flex items-center gap-6 -ml-4">
@@ -91,9 +92,10 @@ export default function LinkCard({
             scale: isHovered ? 1.1 : 1,
           }}
           transition={{ duration: 0.3 }}
-          className="text-accent"
+          className="w-12 h-12 flex items-center justify-center rounded-xl border"
+          style={{ borderColor: 'hsl(220, 13%, 25%)' }}
         >
-          <i className="fas fa-arrow-left text-2xl" />
+          <i className="fas fa-arrow-left text-xl text-accent" />
         </motion.div>
       </div>
       
