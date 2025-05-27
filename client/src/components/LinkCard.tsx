@@ -73,7 +73,7 @@ export default function LinkCard({
           >
             <i className={`${icon} text-2xl text-accent`} />
           </motion.div>
-          <div>
+          <div className="mr-4">
             <h3 className="text-2xl font-cairo font-bold text-white mb-2">
               {title}
             </h3>
