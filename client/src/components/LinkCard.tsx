@@ -69,7 +69,8 @@ export default function LinkCard({
               rotate: isHovered ? 5 : 0,
             }}
             transition={{ duration: 0.3 }}
-            className="icon-container w-16 h-16 flex items-center justify-center bg-secondary rounded-2xl"
+            className="icon-container w-16 h-16 flex items-center justify-center rounded-2xl"
+            style={{ backgroundColor: 'hsl(220, 13%, 18%)' }}
           >
             <i className={`${icon} text-2xl text-accent`} />
           </motion.div>
