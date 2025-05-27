@@ -57,10 +57,13 @@ export default function LinkCard({
       transition={{ delay, duration: 0.8, ease: "easeOut" }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      whileHover={{ scale: 1.02, y: -5 }}
+      whileHover={{ scale: 1.03, y: -8, rotateX: 2 }}
       whileTap={{ scale: 0.98 }}
-      className="link-card bg-white/15 backdrop-blur-md rounded-3xl px-8 py-5 border block relative overflow-hidden cursor-pointer"
-      style={{ borderColor: 'hsl(220, 13%, 25%)' }}
+      className="link-card bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-lg rounded-3xl px-8 py-6 border block relative overflow-hidden cursor-pointer shadow-2xl"
+      style={{ 
+        borderColor: 'hsl(220, 13%, 35%)',
+        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+      }}
     >
       <div className="flex items-center justify-between relative z-10">
         <div className="flex items-center gap-6 -ml-4">
@@ -72,31 +75,33 @@ export default function LinkCard({
             transition={{ duration: 0.3 }}
             className="icon-container w-16 h-16 flex items-center justify-center rounded-2xl border"
             style={{ 
-              backgroundColor: 'hsl(220, 13%, 18%)',
-              borderColor: 'hsl(220, 13%, 25%)'
+              background: 'linear-gradient(135deg, hsl(220, 13%, 22%) 0%, hsl(220, 13%, 16%) 100%)',
+              borderColor: 'hsl(220, 13%, 35%)',
+              boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 4px 12px rgba(0, 0, 0, 0.3)'
             }}
           >
             <i className={`${icon} text-2xl text-accent`} />
           </motion.div>
           <div>
-            <h3 className="text-2xl font-cairo font-bold text-white mb-2">
+            <h3 className="text-2xl font-cairo font-bold text-white mb-2 tracking-wide">
               {title}
             </h3>
-            <p className="font-tajawal text-white/80">{description}</p>
+            <p className="font-tajawal text-white/90 text-sm leading-relaxed">{description}</p>
           </div>
         </div>
         
         <motion.div
           animate={{
-            x: isHovered ? 5 : 0,
-            scale: isHovered ? 1.1 : 1,
+            x: isHovered ? 8 : 0,
+            scale: isHovered ? 1.15 : 1,
+            rotate: isHovered ? -5 : 0,
           }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="text-accent"
         >
           <i className="fas fa-arrow-left text-2xl" style={{ 
-            textShadow: `0 0 0 1px hsl(220, 13%, 25%)`,
-            filter: 'drop-shadow(0 0 1px hsl(220, 13%, 25%))'
+            filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 8px rgba(255, 165, 0, 0.4))',
+            textShadow: '0 0 12px rgba(255, 165, 0, 0.6)'
           }} />
         </motion.div>
       </div>
