@@ -62,18 +62,18 @@ export default function LinkCard({
       className="link-card bg-white/15 backdrop-blur-md rounded-3xl p-8 border border-white/20 block relative overflow-hidden cursor-pointer"
     >
       <div className="flex items-center justify-between relative z-10">
-        <div className="flex items-center space-x-12 -ml-4">
+        <div className="flex items-center space-x-8 -ml-4">
           <motion.div
             animate={{
               scale: isHovered ? 1.1 : 1,
               rotate: isHovered ? 5 : 0,
             }}
             transition={{ duration: 0.3 }}
-            className="icon-container w-16 h-16 flex items-center justify-center bg-accent/10 rounded-2xl border border-accent/20 -ml-2"
+            className="icon-container w-16 h-16 flex items-center justify-center bg-accent/10 rounded-2xl border border-accent/20"
           >
             <i className={`${icon} text-2xl text-accent`} />
           </motion.div>
-          <div className="mr-4">
+          <div>
             <h3 className="text-2xl font-cairo font-bold text-white mb-2">
               {title}
             </h3>
