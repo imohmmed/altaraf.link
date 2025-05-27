@@ -152,7 +152,7 @@ export default function Home() {
       </header>
 
       {/* Links Section */}
-      <section className="py-12 relative">
+      <section className="pt-6 pb-12 relative">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
