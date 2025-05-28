@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import LoadingScreen from "@/components/LoadingScreen";
 import LinkCard from "@/components/LinkCard";
 import FloatingShapes from "@/components/FloatingShapes";
+import logoImage from "@assets/IMG_6308.png";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -110,8 +111,12 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="mb-8"
           >
-            <div className="inline-block p-6 rounded-full icon-container mb-6">
-              <i className="fas fa-crown text-5xl text-accent" />
+            <div className="inline-block mb-6">
+              <img 
+                src={logoImage} 
+                alt="شركة التَرف - لوجو الطائرة والأمواج" 
+                className="w-32 h-32 mx-auto filter drop-shadow-2xl object-contain"
+              />
             </div>
           </motion.div>
           
