@@ -93,7 +93,7 @@ export default function Home() {
       <FloatingShapes />
 
       {/* Header Section */}
-      <header className="relative pt-8 pb-20 text-center">
+      <header className="relative pt-6 pb-20 text-center">
         {/* Luxury travel background image with overlay */}
         <div className="absolute inset-0 opacity-20">
           <img 
