@@ -93,7 +93,7 @@ export default function Home() {
       <FloatingShapes />
 
       {/* Header Section */}
-      <header className="relative py-20 text-center">
+      <header className="relative pt-8 pb-20 text-center">
         {/* Luxury travel background image with overlay */}
         <div className="absolute inset-0 opacity-20">
           <img 
@@ -109,7 +109,7 @@ export default function Home() {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mb-8"
+            className="mb-6 mt-4"
           >
             <div className="inline-block mb-4">
               <img 
