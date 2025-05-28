@@ -161,7 +161,8 @@ export default function Home() {
 
       {/* Features Section */}
       <section className="py-12 relative" style={{ backgroundColor: 'hsl(220, 13%, 18%)' }}>
-        <div className="container mx-auto px-4">
+        <FloatingShapes />
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
