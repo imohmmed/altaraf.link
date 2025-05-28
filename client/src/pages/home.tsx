@@ -5,7 +5,7 @@ import LinkCard from "@/components/LinkCard";
 import FloatingShapes from "@/components/FloatingShapes";
 import logoImage from "@assets/IMG_6310.png";
 import videoBackground from "@assets/2242466119954453862.mp4";
-import linksVideoBackground from "@assets/-2124097964611498419.mp4";
+import linksVideoBackground from "@assets/-2124097964611498419.mov";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -118,7 +118,7 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src={linksVideoBackground} type="video/mp4" />
+            <source src={linksVideoBackground} type="video/mov" />
           </video>
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black/60"></div>
