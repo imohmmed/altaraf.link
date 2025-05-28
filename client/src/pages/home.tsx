@@ -160,7 +160,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-12 relative">
+      <section className="py-12 relative" style={{ backgroundColor: 'hsl(220, 13%, 18%)' }}>
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -197,7 +197,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-white/20">
+      <footer className="py-12 border-t border-white/20" style={{ backgroundColor: 'hsl(220, 13%, 18%)' }}>
         <div className="container mx-auto px-4 text-center">
           <div className="mb-8">
             <motion.i
