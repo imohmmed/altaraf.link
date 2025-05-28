@@ -208,11 +208,17 @@ export default function Home() {
       <footer className="py-12 border-t border-white/20" style={{ backgroundColor: 'hsl(220, 13%, 18%)' }}>
         <div className="container mx-auto px-4 text-center">
           <div className="mb-8">
-            <motion.i
-              animate={{ rotate: [0, 5, -5, 0] }}
-              transition={{ duration: 4, repeat: Infinity }}
-              className="fas fa-plane text-4xl text-accent mb-4"
-            />
+            <motion.div
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{ duration: 3, repeat: Infinity }}
+              className="mb-4"
+            >
+              <img 
+                src={logoImage} 
+                alt="شركة التَرف - لوجو الطائرة والأمواج" 
+                className="w-16 h-16 mx-auto filter drop-shadow-xl object-contain"
+              />
+            </motion.div>
             <h3 className="text-2xl font-cairo font-bold text-white mb-2">شركة التَرف</h3>
             <p className="font-tajawal text-white/80">رحلتك تبدأ من هنا</p>
           </div>
