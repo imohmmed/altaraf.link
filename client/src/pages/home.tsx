@@ -4,7 +4,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import LinkCard from "@/components/LinkCard";
 import FloatingShapes from "@/components/FloatingShapes";
 import logoImage from "@assets/IMG_6310.png";
-import videoBackground from "@assets/2242466119954453862.mp4";
+import backgroundVideo from "@assets/-2124097964611498419.mp4";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -93,22 +93,25 @@ export default function Home() {
     >
       <FloatingShapes />
 
-      {/* Video Header Section */}
-      <header className="relative w-full overflow-hidden">
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-          className="w-full h-auto block"
-        >
-          <source src={videoBackground} type="video/mp4" />
-        </video>
-      </header>
+
 
       {/* Links Section */}
       <section className="py-12 relative">
-        <div className="container mx-auto px-4">
+        {/* Video Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover blur-sm opacity-30"
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-primary/20"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
