@@ -118,11 +118,19 @@ export default function Home() {
             loop 
             muted 
             playsInline
-            preload="metadata"
+            preload="auto"
+            controls={false}
             className="w-full h-full object-cover"
+            onError={(e) => console.log('Video error:', e)}
+            onLoadStart={() => console.log('Video loading started')}
           >
-            <source src={linksVideoBackground} type="video/mov" />
+            <source src={linksVideoBackground} type="video/quicktime" />
+            <source src={linksVideoBackground} type="video/mp4" />
+            {/* Fallback background if video doesn't load */}
           </video>
+          {!linksVideoBackground && (
+            <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20"></div>
+          )}
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
