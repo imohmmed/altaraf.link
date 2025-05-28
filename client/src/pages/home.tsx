@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import LoadingScreen from "@/components/LoadingScreen";
 import LinkCard from "@/components/LinkCard";
 import FloatingShapes from "@/components/FloatingShapes";
-import logoImage from "@assets/IMG_6308.png";
+import logoImage from "@assets/IMG_6310.png";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
