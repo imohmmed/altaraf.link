@@ -101,7 +101,9 @@ export default function Home() {
           loop 
           muted 
           playsInline
+          preload="metadata"
           className="w-full h-auto block"
+          style={{ maxWidth: '100%', height: 'auto' }}
         >
           <source src={videoBackground} type="video/mp4" />
         </video>
@@ -116,6 +118,7 @@ export default function Home() {
             loop 
             muted 
             playsInline
+            preload="metadata"
             className="w-full h-full object-cover"
           >
             <source src={linksVideoBackground} type="video/mov" />
