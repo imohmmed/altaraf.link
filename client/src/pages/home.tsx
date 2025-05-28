@@ -94,64 +94,16 @@ export default function Home() {
       <FloatingShapes />
 
       {/* Video Header Section */}
-      <header className="relative h-screen overflow-hidden">
-        {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src={videoBackground} type="video/mp4" />
-            {/* Fallback image if video doesn't load */}
-            <img 
-              src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080" 
-              alt="Luxury travel background"
-              className="w-full h-full object-cover"
-            />
-          </video>
-          
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
-        
-        {/* Content */}
-        <div className="relative z-10 flex items-center justify-center h-full">
-          <div className="text-center container mx-auto px-4">
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="mb-8"
-            >
-              <img 
-                src={logoImage} 
-                alt="شركة التَرف - لوجو الطائرة والأمواج" 
-                className="w-32 h-32 mx-auto filter drop-shadow-2xl object-contain mb-6"
-              />
-            </motion.div>
-            
-            <motion.h1
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              className="text-6xl md:text-8xl font-cairo font-bold text-white mb-6"
-            >
-              شركة التَرف
-            </motion.h1>
-            
-            <motion.p
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
-              className="text-2xl md:text-3xl font-tajawal text-white/90 mb-12"
-            >
-              وجهتك المثالية للسفر والطيران الفاخر
-            </motion.p>
-          </div>
-        </div>
+      <header className="relative w-full overflow-hidden">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="w-full h-auto block"
+        >
+          <source src={videoBackground} type="video/mp4" />
+        </video>
       </header>
 
       {/* Links Section */}
