@@ -111,11 +111,11 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="mb-8"
           >
-            <div className="inline-block mb-6">
+            <div className="inline-block mb-4">
               <img 
                 src={logoImage} 
                 alt="شركة التَرف - لوجو الطائرة والأمواج" 
-                className="w-32 h-32 mx-auto filter drop-shadow-2xl object-contain"
+                className="w-40 h-40 mx-auto filter drop-shadow-2xl object-contain"
               />
             </div>
           </motion.div>
@@ -124,7 +124,7 @@ export default function Home() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-5xl md:text-7xl font-cairo font-bold text-white mb-4"
+            className="text-5xl md:text-7xl font-cairo font-bold text-white mb-4 -mt-4"
           >
             شركة التَرف
           </motion.h1>
