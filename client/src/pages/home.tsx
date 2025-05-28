@@ -5,6 +5,7 @@ import LinkCard from "@/components/LinkCard";
 import FloatingShapes from "@/components/FloatingShapes";
 import logoImage from "@assets/IMG_6310.png";
 import videoBackground from "@assets/2242466119954453862.mp4";
+import linksVideoBackground from "@assets/-2124097964611498419.mp4";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -107,8 +108,23 @@ export default function Home() {
       </header>
 
       {/* Links Section */}
-      <section className="py-12 relative">
-        <div className="container mx-auto px-4">
+      <section className="py-12 relative overflow-hidden">
+        {/* Video Background for Links Section */}
+        <div className="absolute inset-0 w-full h-full">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src={linksVideoBackground} type="video/mp4" />
+          </video>
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
