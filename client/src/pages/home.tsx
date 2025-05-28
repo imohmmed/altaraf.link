@@ -92,18 +92,21 @@ export default function Home() {
       transition={{ duration: 0.5 }}
       className="luxury-gradient min-h-screen relative overflow-x-hidden"
     >
-      <FloatingShapes />
 
       {/* Video Header Section */}
       <header className="relative w-full overflow-hidden">
         <video 
           autoPlay 
-          loop 
           muted 
           playsInline
           preload="metadata"
           className="w-full h-auto block"
           style={{ maxWidth: '100%', height: 'auto' }}
+          onEnded={(e) => {
+            const video = e.target as HTMLVideoElement;
+            video.playbackRate = video.playbackRate === 1 ? -1 : 1;
+            video.play();
+          }}
         >
           <source src={videoBackground} type="video/mp4" />
         </video>
@@ -115,7 +118,6 @@ export default function Home() {
         <div className="absolute inset-0 w-full h-full">
           <video 
             autoPlay 
-            loop 
             muted 
             playsInline
             preload="auto"
@@ -123,6 +125,11 @@ export default function Home() {
             className="w-full h-full object-cover"
             onError={(e) => console.log('Video error:', e)}
             onLoadStart={() => console.log('Video loading started')}
+            onEnded={(e) => {
+              const video = e.target as HTMLVideoElement;
+              video.playbackRate = video.playbackRate === 1 ? -1 : 1;
+              video.play();
+            }}
           >
             <source src={linksVideoBackground} type="video/quicktime" />
             <source src={linksVideoBackground} type="video/mp4" />
