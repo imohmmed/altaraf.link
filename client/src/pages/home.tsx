@@ -4,6 +4,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import LinkCard from "@/components/LinkCard";
 import FloatingShapes from "@/components/FloatingShapes";
 import logoImage from "@assets/IMG_6310.png";
+import videoBackground from "@assets/8373687947145757063.mp4";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -92,67 +93,64 @@ export default function Home() {
     >
       <FloatingShapes />
 
-      {/* Header Section */}
-      <header className="relative pt-3 pb-20 text-center">
-        {/* Luxury travel background image with overlay */}
-        <div className="absolute inset-0 opacity-20">
-          <img 
-            src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080" 
-            alt="Luxury private jet" 
-            className="w-full h-full object-cover" 
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/50 to-primary/80"></div>
+      {/* Video Header Section */}
+      <header className="relative h-screen overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src={videoBackground} type="video/mp4" />
+            {/* Fallback image if video doesn't load */}
+            <img 
+              src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080" 
+              alt="Luxury travel background"
+              className="w-full h-full object-cover"
+            />
+          </video>
+          
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
         
-        <div className="relative z-10 container mx-auto px-4">
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mb-6"
-          >
-            <div className="inline-block mb-4">
+        {/* Content */}
+        <div className="relative z-10 flex items-center justify-center h-full">
+          <div className="text-center container mx-auto px-4">
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="mb-8"
+            >
               <img 
                 src={logoImage} 
                 alt="شركة التَرف - لوجو الطائرة والأمواج" 
-                className="w-40 h-40 mx-auto filter drop-shadow-2xl object-contain"
+                className="w-32 h-32 mx-auto filter drop-shadow-2xl object-contain mb-6"
               />
-            </div>
-          </motion.div>
-          
-          <motion.h1
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="text-5xl md:text-7xl font-cairo font-bold text-white mb-4 -mt-4"
-          >
-            شركة التَرف
-          </motion.h1>
-          
-          <motion.p
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
-            className="text-xl md:text-2xl font-tajawal text-white/90 mb-8"
-          >
-            وجهتك المثالية للسفر والطيران الفاخر
-          </motion.p>
-          
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
-            className="flex justify-center space-x-4"
-          >
-            <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-              <i className="fas fa-star text-accent" />
-              <span className="text-white font-tajawal">خدمات متميزة</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-              <i className="fas fa-globe text-accent" />
-              <span className="text-white font-tajawal">عالمي</span>
-            </div>
-          </motion.div>
+            </motion.div>
+            
+            <motion.h1
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="text-6xl md:text-8xl font-cairo font-bold text-white mb-6"
+            >
+              شركة التَرف
+            </motion.h1>
+            
+            <motion.p
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
+              className="text-2xl md:text-3xl font-tajawal text-white/90 mb-12"
+            >
+              وجهتك المثالية للسفر والطيران الفاخر
+            </motion.p>
+          </div>
         </div>
       </header>
 
