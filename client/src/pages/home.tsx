@@ -229,7 +229,7 @@ export default function Home() {
           </div>
           
           <p className="text-white/60 font-tajawal">
-            © 2024 شركة التَرف. جميع الحقوق محفوظة.
+            © 2019 شركة التَرف. جميع الحقوق محفوظة.
           </p>
         </div>
       </footer>
