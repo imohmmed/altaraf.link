@@ -203,16 +203,16 @@ export default function Home() {
           
           <div className="flex justify-center items-center gap-4 mb-8">
             {[
-              { icon: "fas fa-map-marker-alt", label: "موقع المكتب" },
-              { icon: "fas fa-globe", label: "الموقع الإلكتروني" },
-              { icon: "fab fa-telegram", label: "تيليجرام" },
-              { icon: "fab fa-instagram", label: "إنستغرام" },
-              { icon: "fab fa-tiktok", label: "تيك توك" },
-              { icon: "fab fa-facebook", label: "فيسبوك" }
+              { icon: "fas fa-map-marker-alt", label: "موقع المكتب", url: "https://maps.app.goo.gl/aiWDcKgQDaGL2h7Q9?g_st=com.google.maps.preview.copy" },
+              { icon: "fab fa-whatsapp", label: "واتساب", url: "https://wa.me/+9647728887722" },
+              { icon: "fab fa-telegram", label: "تيليجرام", url: "https://t.me/ataraf" },
+              { icon: "fab fa-instagram", label: "إنستغرام", url: "https://www.instagram.com/altaraf_company?igsh=dG85aGw0cGxmZmJ0" },
+              { icon: "fab fa-tiktok", label: "تيك توك", url: "#" },
+              { icon: "fab fa-facebook", label: "فيسبوك", url: "https://www.facebook.com/share/1E48C3Tq45/?mibextid=wwXIfr" }
             ].map((social, index) => (
               <motion.a
                 key={index}
-                href="https://t.me/mohmmed"
+                href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, y: -5 }}
