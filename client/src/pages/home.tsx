@@ -4,8 +4,8 @@ import LoadingScreen from "@/components/LoadingScreen";
 import LinkCard from "@/components/LinkCard";
 import FloatingShapes from "@/components/FloatingShapes";
 import logoImage from "@assets/IMG_6310.png";
-import videoBackground from "@assets/2242466119954453862.mp4";
-import linksVideoBackground from "@assets/-2124097964611498419.mov";
+const videoBackground = "https://cdn.shopify.com/videos/c/o/v/a11d4df1500b4a20b9225ef86ce4ce82.mp4";
+const linksVideoBackground = "https://cdn.shopify.com/videos/c/o/v/12f1dd56e2f34187a1352282e6ac9535.mov";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
