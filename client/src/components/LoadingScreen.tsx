@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import logoImage from "@assets/IMG_6310.png";
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -28,7 +29,8 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed inset-0 luxury-gradient z-50 flex items-center justify-center"
+      className="fixed inset-0 z-50 flex items-center justify-center"
+      style={{ backgroundColor: 'hsl(220, 13%, 18%)' }}
     >
       <div className="text-center">
         <motion.div
@@ -37,10 +39,15 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative mb-8"
         >
-          <motion.i
-            animate={{ y: [-10, 10, -10] }}
+          <motion.img
+            src={logoImage}
+            alt="شركة التَرف"
+            animate={{ 
+              y: [-10, 10, -10],
+              scale: [1, 1.05, 1]
+            }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="fas fa-plane text-6xl text-white"
+            className="w-24 h-24 object-contain mx-auto"
           />
           <motion.div
             animate={{
