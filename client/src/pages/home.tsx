@@ -129,7 +129,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-cairo font-bold text-white mb-4">تواصل معنا</h2>
+            <h2 className="text-4xl font-cairo font-bold text-white mb-4">روابط شركة التَرف</h2>
             <p className="text-xl font-tajawal text-white/80">جميع روابطنا في مكان واحد</p>
           </motion.div>
 
