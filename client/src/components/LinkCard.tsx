@@ -61,7 +61,7 @@ export default function LinkCard({
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{ scale: 1.03, y: -8, rotateX: 2 }}
       whileTap={{ scale: 0.98 }}
-      className="link-card backdrop-blur-lg rounded-[2rem] px-8 py-6 border block relative overflow-hidden cursor-pointer shadow-2xl"
+      className="link-card backdrop-blur-lg rounded-[3rem] px-8 py-4 border block relative overflow-hidden cursor-pointer shadow-2xl"
       style={{ 
         backgroundColor: 'hsl(220, 13%, 18%)',
         borderColor: 'hsl(220, 13%, 35%)',
@@ -76,7 +76,7 @@ export default function LinkCard({
               rotate: isHovered ? 5 : 0,
             }}
             transition={{ duration: 0.3 }}
-            className="icon-container w-16 h-16 flex items-center justify-center rounded-2xl border"
+            className="icon-container w-14 h-14 flex items-center justify-center rounded-2xl border"
             style={{ 
               background: 'linear-gradient(135deg, hsl(220, 13%, 22%) 0%, hsl(220, 13%, 16%) 100%)',
               borderColor: 'hsl(220, 13%, 35%)',
@@ -86,10 +86,10 @@ export default function LinkCard({
             <i className={`${icon} text-2xl text-accent`} />
           </motion.div>
           <div>
-            <h3 className="text-2xl font-cairo font-bold text-white mb-2 tracking-wide">
+            <h3 className="text-xl font-cairo font-bold text-white mb-1 tracking-wide">
               {title}
             </h3>
-            <p className="font-tajawal text-white/90 text-sm leading-relaxed">{description}</p>
+            <p className="font-tajawal text-white/90 text-xs leading-relaxed">{description}</p>
           </div>
         </div>
         

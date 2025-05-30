@@ -119,7 +119,7 @@ export default function Home() {
 
       {/* Links Section */}
       <section className="py-12 relative overflow-hidden" style={{ backgroundColor: 'hsl(220, 13%, 18%)' }}>
-        
+        <FloatingShapes />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
