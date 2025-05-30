@@ -20,7 +20,7 @@ export default function Home() {
     {
       icon: "fab fa-whatsapp",
       title: "واتساب",
-      description: "تواصل مباشر وسريع",
+      description: "تواصل وحجز مباشر",
       url: "https://wa.me/+9647728887722"
     },
     {
