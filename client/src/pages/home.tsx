@@ -118,34 +118,7 @@ export default function Home() {
       </header>
 
       {/* Links Section */}
-      <section className="py-12 relative overflow-hidden">
-        {/* Video Background for Links Section */}
-        <div className="absolute inset-0 w-full h-full">
-          <video 
-            autoPlay 
-            muted 
-            playsInline
-            preload="auto"
-            controls={false}
-            className="w-full h-full object-cover"
-            onError={(e) => console.log('Video error:', e)}
-            onLoadStart={() => console.log('Video loading started')}
-            onEnded={(e) => {
-              const video = e.target as HTMLVideoElement;
-              video.playbackRate = video.playbackRate === 1 ? -1 : 1;
-              video.play();
-            }}
-          >
-            <source src={linksVideoBackground} type="video/quicktime" />
-            <source src={linksVideoBackground} type="video/mp4" />
-            {/* Fallback background if video doesn't load */}
-          </video>
-          {!linksVideoBackground && (
-            <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20"></div>
-          )}
-          {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/60"></div>
-        </div>
+      <section className="py-12 relative overflow-hidden" style={{ backgroundColor: 'hsl(220, 13%, 18%)' }}>
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
