@@ -61,8 +61,9 @@ export default function LinkCard({
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{ scale: 1.03, y: -8, rotateX: 2 }}
       whileTap={{ scale: 0.98 }}
-      className="link-card bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-lg rounded-3xl px-8 py-6 border block relative overflow-hidden cursor-pointer shadow-2xl"
+      className="link-card backdrop-blur-lg rounded-[2rem] px-8 py-6 border block relative overflow-hidden cursor-pointer shadow-2xl"
       style={{ 
+        backgroundColor: 'hsl(220, 13%, 18%)',
         borderColor: 'hsl(220, 13%, 35%)',
         boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
       }}
