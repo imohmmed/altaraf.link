@@ -26,7 +26,7 @@ export default function Home() {
     {
       icon: "fab fa-telegram",
       title: "تيليجرام",
-      description: "تواصل مباشر وخدمة سريعة",
+      description: "قناتنا لمتابعة اخر الاخبار",
       url: "https://t.me/ataraf"
     },
     {
