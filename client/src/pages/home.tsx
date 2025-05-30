@@ -15,6 +15,7 @@ export default function Home() {
       icon: "fas fa-map-marker-alt",
       title: "موقع المكتب",
       description: "زورنا في مقرنا الرئيسي",
+      url: "https://maps.app.goo.gl/aiWDcKgQDaGL2h7Q9?g_st=com.google.maps.preview.copy"
     },
     {
       icon: "fab fa-whatsapp",
