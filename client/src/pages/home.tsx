@@ -17,19 +17,22 @@ export default function Home() {
       description: "زورنا في مقرنا الرئيسي",
     },
     {
-      icon: "fas fa-globe",
-      title: "الموقع الإلكتروني",
-      description: "اكتشف جميع خدماتنا وعروضنا",
+      icon: "fab fa-whatsapp",
+      title: "واتساب",
+      description: "تواصل مباشر وسريع",
+      url: "https://wa.me/+9647728887722"
     },
     {
       icon: "fab fa-telegram",
       title: "تيليجرام",
       description: "تواصل مباشر وخدمة سريعة",
+      url: "https://t.me/ataraf"
     },
     {
       icon: "fab fa-instagram",
       title: "إنستغرام",
       description: "شاهد أعمالنا وأحدث العروض",
+      url: "https://www.instagram.com/altaraf_company?igsh=dG85aGw0cGxmZmJ0"
     },
     {
       icon: "fab fa-tiktok",
@@ -40,6 +43,7 @@ export default function Home() {
       icon: "fab fa-facebook",
       title: "فيسبوك",
       description: "انضم لمجتمعنا وآخر الأخبار",
+      url: "https://www.facebook.com/share/1E48C3Tq45/?mibextid=wwXIfr"
     },
   ];
 

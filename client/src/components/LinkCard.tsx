@@ -5,6 +5,7 @@ interface LinkCardProps {
   icon: string;
   title: string;
   description: string;
+  url?: string;
   delay?: number;
 }
 
@@ -12,6 +13,7 @@ export default function LinkCard({
   icon,
   title,
   description,
+  url = "#",
   delay = 0,
 }: LinkCardProps) {
   const [isHovered, setIsHovered] = useState(false);
@@ -48,7 +50,7 @@ export default function LinkCard({
 
   return (
     <motion.a
-      href="https://t.me/mohmmed"
+      href={url}
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleClick}
