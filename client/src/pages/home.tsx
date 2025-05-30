@@ -99,7 +99,7 @@ export default function Home() {
     >
 
       {/* Video Header Section */}
-      <header className="relative w-full overflow-hidden">
+      <header className="relative w-full overflow-hidden" style={{ backgroundColor: 'hsl(220, 13%, 18%)' }}>
         <video 
           autoPlay 
           muted 
