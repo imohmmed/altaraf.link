@@ -4,7 +4,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import LinkCard from "@/components/LinkCard";
 import FloatingShapes from "@/components/FloatingShapes";
 import logoImage from "@assets/IMG_6310.png";
-const videoBackground = "https://cdn.shopify.com/videos/c/o/v/a11d4df1500b4a20b9225ef86ce4ce82.mp4";
+const videoBackground = "https://j.top4top.io/m_343897gd60.mp4";
 const linksVideoBackground = "https://cdn.shopify.com/videos/c/o/v/12f1dd56e2f34187a1352282e6ac9535.mov";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
   const links = [
     {
       icon: "fas fa-map-marker-alt",
-      title: "موقع المكتب",
+      title: "موقع الشركة",
       description: "زورنا في مقرنا الرئيسي",
       url: "https://maps.app.goo.gl/aiWDcKgQDaGL2h7Q9?g_st=com.google.maps.preview.copy"
     },
@@ -96,11 +96,12 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="luxury-gradient min-h-screen relative overflow-x-hidden"
+      className="min-h-screen relative overflow-x-hidden"
+      style={{ backgroundColor: 'hsl(200, 100%, 40%)' }}
     >
 
       {/* Video Header Section */}
-      <header className="relative w-full overflow-hidden" style={{ backgroundColor: 'hsl(220, 13%, 18%)' }}>
+      <header className="relative w-full overflow-hidden" style={{ backgroundColor: 'hsl(200, 100%, 40%)' }}>
         <video 
           autoPlay 
           muted 
@@ -184,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-white/20" style={{ backgroundColor: 'hsl(220, 13%, 18%)' }}>
+      <footer className="py-12 border-t border-white/20" style={{ backgroundColor: 'hsl(200, 100%, 40%)' }}>
         <div className="container mx-auto px-4 text-center">
           <div className="mb-8">
             <motion.div
@@ -204,7 +205,7 @@ export default function Home() {
           
           <div className="flex justify-center items-center gap-4 mb-8">
             {[
-              { icon: "fas fa-map-marker-alt", label: "موقع المكتب", url: "https://maps.app.goo.gl/aiWDcKgQDaGL2h7Q9?g_st=com.google.maps.preview.copy" },
+              { icon: "fas fa-map-marker-alt", label: "موقع الشركة", url: "https://maps.app.goo.gl/aiWDcKgQDaGL2h7Q9?g_st=com.google.maps.preview.copy" },
               { icon: "fab fa-whatsapp", label: "واتساب", url: "https://wa.me/+9647728887722" },
               { icon: "fab fa-telegram", label: "تيليجرام", url: "https://t.me/ataraf" },
               { icon: "fab fa-instagram", label: "إنستغرام", url: "https://www.instagram.com/altaraf_company?igsh=dG85aGw0cGxmZmJ0" },
