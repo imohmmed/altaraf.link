@@ -124,27 +124,30 @@ export default function Home() {
             <p className="font-tajawal text-white/80">رحلتك تبدأ من هنا</p>
           </motion.div>
           
-          <div className="flex justify-center items-center gap-4 mb-8">
-            {[
-              { icon: "fas fa-map-marker-alt", label: "موقع الشركة", url: "https://maps.app.goo.gl/aiWDcKgQDaGL2h7Q9?g_st=com.google.maps.preview.copy" },
-              { icon: "fab fa-whatsapp", label: "واتساب", url: "https://wa.me/+9647728887722" },
-              { icon: "fab fa-telegram", label: "تيليجرام", url: "https://t.me/ataraf" },
-              { icon: "fab fa-instagram", label: "إنستغرام", url: "https://www.instagram.com/altaraf_company?igsh=dG85aGw0cGxmZmJ0" },
-              { icon: "fab fa-facebook", label: "فيسبوك", url: "https://www.facebook.com/share/1E48C3Tq45/?mibextid=wwXIfr" },
-              { icon: "fab fa-tiktok", label: "تيك توك", url: "https://vt.tiktok.com/ZSkd7rSFb/" }
-            ].map((social, index) => (
-              <motion.a
-                key={index}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, y: -5 }}
-                whileTap={{ scale: 0.9 }}
-                className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 shadow-lg border border-white/20"
-              >
-                <i className={`${social.icon} text-lg`} />
-              </motion.a>
-            ))}
+          <div className="text-center mb-8">
+            <h2 className="text-xl font-cairo font-bold text-white mb-6">تواصل معنا</h2>
+            <div className="flex justify-center items-center gap-4">
+              {[
+                { icon: "fas fa-map-marker-alt", label: "موقع الشركة", url: "https://maps.app.goo.gl/aiWDcKgQDaGL2h7Q9?g_st=com.google.maps.preview.copy" },
+                { icon: "fab fa-whatsapp", label: "واتساب", url: "https://wa.me/+9647728887722" },
+                { icon: "fab fa-telegram", label: "تيليجرام", url: "https://t.me/ataraf" },
+                { icon: "fab fa-instagram", label: "إنستغرام", url: "https://www.instagram.com/altaraf_company?igsh=dG85aGw0cGxmZmJ0" },
+                { icon: "fab fa-facebook", label: "فيسبوك", url: "https://www.facebook.com/share/1E48C3Tq45/?mibextid=wwXIfr" },
+                { icon: "fab fa-tiktok", label: "تيك توك", url: "https://vt.tiktok.com/ZSkd7rSFb/" }
+              ].map((social, index) => (
+                <motion.a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.2, y: -5 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 shadow-lg border border-white/20"
+                >
+                  <i className={`${social.icon} text-lg`} />
+                </motion.a>
+              ))}
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
