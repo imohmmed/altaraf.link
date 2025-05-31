@@ -30,7 +30,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
       className="fixed inset-0 z-50 flex items-center justify-center"
-      style={{ backgroundColor: 'hsl(220, 13%, 18%)' }}
+      style={{ backgroundColor: 'hsl(200, 100%, 40%)' }}
     >
       <div className="text-center">
         <motion.div
