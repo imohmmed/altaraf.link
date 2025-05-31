@@ -100,7 +100,7 @@ export default function Home() {
       </header>
 
       {/* Links Section */}
-      <section className="py-12 relative overflow-hidden" style={{ backgroundColor: 'hsl(200, 100%, 40%)' }}>
+      <section className="py-12 relative overflow-hidden">
         <FloatingShapes />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -144,7 +144,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 relative" style={{ backgroundColor: 'hsl(200, 100%, 35%)' }}>
+      <section className="py-16 relative">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -185,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-white/20" style={{ backgroundColor: 'hsl(200, 100%, 30%)' }}>
+      <footer className="py-12 border-t border-white/20">
         <div className="container mx-auto px-4 text-center">
           <div className="mb-8">
             <motion.div
